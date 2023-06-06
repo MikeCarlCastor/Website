@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Analyzing Client Disputes at Yellevate</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Portfolio Website</strong> <span>by Mike Carl Castor</span></a>
+						<nav>
+							<a href="index.html" class="fas fa-home">Home</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Portfolio</a></li>
+						
+						
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Analyzing Client Disputes at Yellevate</h1>
+									</header>
+									
+									<h2><i class="fas fa-info-circle"></i> Introduction</h2>
+									<p>Yellevate, which specializes in providing marketing services to other companies, helps mid-sized companies to launch their marketing operations, which includes things like email marketing, website development, content creation, and others. </p>
+									<p>Yellevate uses data analytics to keep track of how well it helps companies improve their marketing operations. For instance, if a company approaches Yellevate to help improve its online advertising operations, Yellevate tracks this by looking at email impressions, click-through rates, website traffic, and other key performance indicators.</p>
+									<p>However, for the past few years, Yellevate has been struggling with client disputes. Yellevate defines disputes as clients expressing dissatisfaction with the company’s services and refusing to pay for them. This has been a huge financial burden for the company: statistically, nearly 20% of the disputes raised against Yellevate resulted in a payment opt-out. This has led to an approximate 5% annual loss of revenue (in USD).</p>
+									<b>Important assumption: The company always provides quality and top-notched services.</b>
+									<p></p>
+									<video src="videos/firstvid.mp4" controls></video>
+									<h2><i class="fas fa-bullseye"></i> Analysis Goals</h2>
+									<p>Executives at the company have provided the following information required to identify the circumstances around the dispute problem:</p>
+									<ul>
+										<li>The processing time in which invoices are settled (average # of days rounded to a whole number).</li>
+										<li>The processing time for the company to settle disputes (average # of days rounded to a whole number).</li>
+										<li>Percentage of disputes received by the company that were lost (within two decimal places).</li>
+										<li>Percentage of revenue lost from disputes (within two decimal places).</li>
+										<li>The country where the company reached the highest losses from lost disputes (in USD).</li>
+									  </ul>
+									<h2><i class="fas fa-cogs"></i> Methodology</h2>
+									<p>
+										<li>Step 1. Identify the problems facing the business and come up with objectives that can solve them with data analysis.</li>
+										<li>Step 2. Set data analysis goals according to these business objectives.</li>
+										<li>Step 3. Conduct your data analysis by loading a .csv file in SQL to perform the necessary data cleaning. (Here is the cleaning process using PostgreSQL <a href="https://github.com/MikeCarlCastor/WorkCompilation/blob/main/SQL/Yellevate/SQL%20queries.sql">queries</a>.)</li>
+										<li>Step 4. Analyze data using Excel functions. (Here is the cleaned <a href="https://github.com/MikeCarlCastor/WorkCompilation/blob/main/SQL/Yellevate/analysis.xlsx">data</a>.)</li>
+										<li>Step 5. Visualize your processed data in a manner that your visuals will help answer any and all the questions.</li>
+										<li>Step 6. Generate insights from your analysis to provide recommendations on probable strategies to deal with disputes effectively.</li>
+									</p>
+									<h2><i class="fas fa-search"></i> Findings</h2>
+									<img src="images/findings1.png" alt="Example image" style="max-width: 100%; height: 600;">
+									<p style="font-style: italic;">The average processing time for Yellevate to settle invoices is 26 days. Russia has the longest processing time to settle invoices with 29 days. It is followed by the US and France with 28 days, while Spain and China takes 25 and 23 days respectively.
+									</p>
+									<br>
+									<br>
+									<img src="images/findings2.png" alt="Example image" style="max-width: 100%; height: 600;">
+									<p style="font-style: italic;">The average days for Yellevate to settle disputes is 36 days. France and China had the shortest processing with only 34 days. This is 12% faster than Spain, Russia, and the US that took 37, 38, and 41 days respectively.
+									</p>
+									<br>
+									<br>
+									<img src="images/findings3.png" alt="Example image" style="max-width: 100%; height: 600;">
+									<p style="font-style: italic;">The disputes lost and the processing time to settle disputes do not follow the same trend. Therefore, the processing time for disputes does not affect the number of disputes lost.
+									</p>
+									<br>
+									<br>
+									<img src="images/findings4.png" alt="Example image" style="max-width: 100%; height: 600;">
+									<p style="font-style: italic;">France has lost 34.23% of its total disputes which is the highest percentage of lost among other countries (Spain, Russia, US, and China) making up 75% of Yellevate's total disputes lost.
+									</p>
+									<br>
+									<br>
+									<img src="images/findings5.png" alt="Example image" style="max-width: 100%; height: 600;">
+									<p style="font-style: italic;">France has lost 13.35% of its total revenue which is the highest percentage of lost among other countries (Spain, Russia, US, and China) making up 76% of Yellevate's total lost revenue.
+									</p>
+									<br>
+									<br>
+									<img src="images/findings6.png" alt="Example image" style="max-width: 100%; height: 600;">
+									<p style="font-style: italic;">Disputes lost and lost revenue follow the same trend. As the percentage of disputes lost goes up, the percentage of lost revenue  also makes an uptrend particularly those accounts in France. Therefore, to lessen the revenue lost and disputes lost, the company must make sure that clients in France make payments for their invoices.
+									</p>
+									<h2><i class="fas fa-lightbulb"></i>Recommendations</h2>
+									<p>According to the data that was gathered and analysis that was done, it is apparent that clients from France critically affected Yellevate's cashflow due to disputes. To lessen the frequency of disputes and improve the company's annual revenue, here's what I recommend to do:
+									</p>
+									<ul>
+										<li>The company should review their contract technicalities and make sure that terms written are understandable and unambiguous for every client. (esp. in France)
+										</li>
+										<li>Make a stricter payment shorter payment term - like 15 days to guarantee that money will keep coming into your business. 
+										</li>
+										<li>Sending payment reminders regularly may also help clients get updated with their invoices and keep them reminded that the deadline is coming up. This way, clients can be persuaded to pay up on time. 
+										</li>
+										<li>Having a discussion with the client about what payment method they are used to would also make getting paid even easier. 
+										</li>
+										<li>The company can offer incentives such as discounts or rewards to those who pay before the invoice due date and give late fees to those who don't pay on time.
+										</li>
+									</ul>
+									<h2><i class="fas fa-question-circle"></i> FAQs</h2>
+									<p>If you have any questions about my data analysis for the Yellevate project, feel free to send me a message through the website and I'll get back to you as soon as possible.</p>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<form method="post" action="https://formspree.io/f/mayzelez">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" required/>
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" required/>
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="6" required></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Clear" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split">
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<h3>Email</h3>
+									<a>cmikecarl01@gmail.com</a>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-phone"></span>
+									<h3>Phone</h3>
+									<span>+639451557209</span>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-home"></span>
+									<h3>Address</h3>
+									<span>Poblacion<br />
+									Tboli, South Cotabato 9513<br />
+									Philippines</span>
+								</div>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							
+							<li><a href="https://www.facebook.com/carlitoooo1" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/MikeCarlCastor" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/mike-carl-castor-66722524a" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						
+					</div>
+				</footer>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

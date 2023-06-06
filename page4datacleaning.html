@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Call Center Performance Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+        img, video {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+		</style>
+	</head>
+	<body class="is-preload" >
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Portfolio Website</strong> <span>by Mike Carl Castor</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="page2excel.html">Excel Projects</a></li>
+							<li><a href="page3callcenterTOC.html">Project Contents</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+					
+							<section id="one">
+								<div class="inner">
+									<h1><i class="fas fa-broom"></i> DATA LOADING, CLEANING, & PREPARATION</h1>
+									<h2 id="loading-CSV-Into-Power-Query">Step 1. Loading CSV Into Power Query</h2>
+									<p>Since the file is in CSV format. I have to transform the data first before cleaning it. The image below shows what the raw file looks like if loaded on excel. </p>
+									<img src="images/rawcallcenter.png" alt="Image related to the content" style="max-width: 100%; height: 600;">
+									<br>
+									<br>
+									<br>
+									
+									<p>In order to transform the raw file into a more comprehensible table, I have to import it to Power Query. After importing, the data will automatically turn it into a table, removing the unnecessary characters such as colons, semi-colons, commas, etc. The video clip below shows how I imported the file and transformed it in Power Query.</p>
+									<video src="videos/firstvid.mp4" controls></video>
+									<br>
+									<br>
+									<br>
+									
+										<h2 id="data-cleaning">Step 2. Data Cleaning</h2>
+									<p>Now that I finished loading the data into power query, the next step is cleaning. Firstly, I have to remove any duplicates in the data. Then, I have to remove or replace any missing values. Missing values are usually defined as <em>“nulls”</em>. Lastly, I have to change the <em>date</em> data type into dates since they are in numerical values. The clip below shows the entire cleaning process.</p>
+									<video src="videos/cleaning_process.mp4" controls></video>
+									<br>
+									<br>
+									<br>
+									
+										<h2 id="loading-data-Into-Excel">Step 3. Loading Data Into Excel</h2>
+									<p>After cleaning the data, I loaded it on Excel and changed the sheet name as <em>“call_center_cleaned”</em>. The picture shows what the data looks like after loaded on Excel.</p>
+									<img src="images/apply_and_load.png" alt="Image related to the content" style="max-width: 100%; height: 600;">
+									<br>
+									<br>
+									<br>
+								
+									<p>Although the data is already transformed and cleaned, there are still a few columns that I need to add. If you can remember, I have a dataset with two reference tables. This is where it will come in handy. The picture below shows what the reference table looks like.  </p>
+									<img src="images/reference_table.png" alt="Image related to the content" style="max-width: 100%; height: 600;">
+									<br>
+									<br>
+									<br>
+									
+									<h2 id="adding-columns-using-xlookup">Step 4. Adding Columns Using XLOOKUP</h2>
+									<p>After copying the reference tables into my <em>call_center_cleaned</em> workbook, I began adding columns to the dataset. The first column I added was the agents’ full name. The video clip below shows the process.  </p>
+									<video src="videos/add_column_name.mp4" controls></video>
+									<br>
+									<br>
+									<br>
+									
+									<p>I also wanted to extract the data in <em>Hire Date</em> column from the reference sheet. To do this, I used <em>XLOOKUP</em> function just like what I did in <em>Full Name</em> column. Please play the video clip below to see the process.</p>
+									<video src="videos/hire_date.mp4" controls></video>
+									<br>
+									<br>
+									<br>
+									
+									<p>Next, let’s integrate some data from the product table. I wanted to extract the <em>product_name</em> based on the <em>product_id</em>. For this, I used the same lookup function. See the video clip below.</p>
+									<video src="videos/product_name.mp4" controls></video>
+									<br>
+									<br>
+									<br>
+									
+									<p>Finally, I extracted the <em>supervisor</em> column. This column contains the names of the supervisors under whom the agents are working. Please see the process below.</p>
+									<video src="videos/supervisor.mp4" controls></video>
+									<br>
+									<br>
+									<br>
+									
+									<h2 id="adding-columns-using-formulas">Step 5. Adding Columns Using Formulas</h2>
+									<p>After incorporating columns using lookup functions, I improved the dataset by adding calculated columns. One of the new columns I created is called <em>tenure,</em> which shows how long each agent has been working for the company. To calculate this, I subtracted the <em>hire date</em> of each agent from the cutoff date. The cutoff date marks the point in time that separates when additional business transactions should be recorded in the next reporting period. If you'd like to see a step-by-step demonstration, please watch the accompanying video clip. </p>
+									<video src="videos/tenure.mp4" controls></video>
+									<br>
+									<br>
+									<br>
+									
+									<p>Next, I proceeded to add a <em>weekday column,</em> which indicates the specific day of the week when each transaction occurred. To generate this column, I utilized the <em>date</em> column and extracted the corresponding <em>weekday</em> information. This additional column will prove useful for my time series analysis in the future. For a more detailed demonstration of the process, please refer to the provided video clip.</p>
+									<video src="videos/weekday.mp4" controls></video>
+									
+									<br>
+									<br>
+									<br>
+									<p>Lastly, I added the <em>avg_aht_in_minutes</em> column, which represents the average call duration in minutes. To achieve this, I utilized the data from the <em>avg_aht</em> column, which was initially measured in seconds. Since each day contains 24 hours (86,400 seconds), I divided the values in the <em>avg_aht</em> column by 86,400 to convert them into minutes. This conversion allowed me to express the average call duration in a more understandable unit. For a detailed demonstration of the process, please refer to the accompanying video clip.</p>
+									<video src="videos/avg_aht_in_minutes.mp4" controls></video>
+									<br>
+									<br>
+									<section id="two">
+										<div class="inner">
+											<ul class="actions">
+											<li><a href="page4dataAnalysis.html" class="button next">Next Section</a></li>
+											</ul>
+										</div>
+									</section>	
+								</div>	
+					</div>
+
+				<!-- Contact -->
+
+				<section id="contact">
+					<div class="inner">
+				  <section>
+							<form method="post" action="https://formspree.io/f/mayzelez">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" required/>
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" required/>
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="6" required></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Clear" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split">
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<h2>Email</h2>
+									<a>cmikecarl01@gmail.com</a>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-phone"></span>
+									<h2>Phone</h2>
+									<span>+639451557209</span>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-home"></span>
+									<h2>Address</h2>
+									<span>Poblacion<br />
+									Tboli, South Cotabato 9513<br />
+									Philippines</span>
+								</div>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							
+							<li><a href="https://www.facebook.com/carlitoooo1" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/MikeCarlCastor" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/mike-carl-castor-66722524a" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						
+					</div>
+				</footer>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

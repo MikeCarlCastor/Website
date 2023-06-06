@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Analyzing Client Disputes at Yellevate</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Portfolio Website</strong> <span>by Mike Carl Castor</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Portfolio</a></li>
+						
+						
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Analyzing Client Disputes at Yellevate</h1>
+									</header>
+									<span><iframe title="google apps data" width="900" height="660" src="https://app.powerbi.com/view?r=eyJrIjoiYjg5OGVkMGMtODExYi00NjU1LWFiYWEtYjhhODFlOTgyM2VjIiwidCI6ImJkNTMzZWVmLTY1ODktNDVlOC1hNTIyLTc5Y2M4NzJmNmQ3OSIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true" class="image main"></iframe></span>
+									<header class="major"><h2>Introduction</h2></header>
+									<p>Yellevate, which specializes in providing marketing services to other companies, helps mid-sized companies to launch their marketing operations, which includes things like email marketing, website development, content creation, and others. </p>
+									<p>Yellevate uses data analytics to keep track of how well it helps companies improve their marketing operations. For instance, if a company approaches Yellevate to help improve its online advertising operations, Yellevate tracks this by looking at email impressions, click-through rates, website traffic, and other key performance indicators.</p>
+									<p>However, for the past few years, Yellevate has been struggling with client disputes. Yellevate defines disputes as clients expressing dissatisfaction with the company’s services and refusing to pay for them. This has been a huge financial burden for the company: statistically, nearly 20% of the disputes raised against Yellevate resulted in a payment opt-out. This has led to an approximate 5% annual loss of revenue (in USD).</p>
+									<header class="major"><h2>Analysis Goals</h2></header>
+									<p>Executives at the company have provided the following information required to identify the circumstances around the dispute problem:</p>
+									<ul>
+										<li>The processing time in which invoices are settled (average # of days rounded to a whole number).</li>
+										<li>The processing time for the company to settle disputes (average # of days rounded to a whole number).</li>
+										<li>Percentage of disputes received by the company that were lost (within two decimal places).</li>
+										<li>Percentage of revenue lost from disputes (within two decimal places).</li>
+										<li>The country where the company reached the highest losses from lost disputes (in USD).</li>
+									  </ul>
+									<header class="major"><h2>Metholody</h2></header>
+									<p>
+										<li>Step 1. Identify the problems facing the business and come up with objectives that can solve them with data analysis.</li>
+										<li>Step 2. Set data analysis goals according to these business objectives.</li>
+										<li>Step 3. Conduct your data analysis by loading a .csv file in SQL to perform the necessary data cleaning.</li>
+										<li>Step 4. Analyze data using Excel functions.</li>
+										<li>Step 5. Visualize your processed data in a manner that your visuals will help answer any and all the questions.</li>
+										<li>Step 6. Generate insights from your analysis to provide recommendations on probable strategies to deal with disputes effectively.</li>
+
+										<html>
+											<head>
+												<title>My Data Cleaning Methods</title>
+												<style>
+													/* This is the CSS for the query container */
+													#query-container pre{
+														border: 1px solid #ccc;
+														padding: 10px;
+														padding-left: 20px;
+														font-family: Arial, sans-serif;
+														font-size: 16px;
+														line-height: 1.5;
+														color: #333;
+														background-color: #f9f9f9;
+														overflow: auto;
+													}
+												</style>
+											</head>
+											<body>
+												<!-- This is the query container -->
+												<div id="query-container">
+													<p>First, I remove any duplicates in the dataset by checking for rows with the same values in all columns. I use the pandas library in Python to do this:</p>
+													<pre>
+												import pandas as pd
+												
+												df = pd.read_csv('my_dataset.csv')
+												df.drop_duplicates(inplace=True)
+													</pre>
+													<p>Next, I fill any missing values in the dataset with the mean of the column. Again, I use the pandas library to do this:</p>
+													<pre>
+												df.fillna(df.mean(), inplace=True)
+													</pre>
+													<p>Finally, I convert any categorical variables to numerical ones using one-hot encoding. This can be done using the pandas `get_dummies()` function:</p>
+													<pre>
+												categorical_cols = ['gender', 'education', 'occupation']
+												df_encoded = pd.get_dummies(df, columns=categorical_cols)
+													</pre>
+												</div>
+											
+												<!-- This is the JavaScript code to set the container height -->
+												<script>
+													window.onload = function() {
+														var container = document.getElementById("query-container");
+														var height = container.scrollHeight + "px";
+														container.style.height = height;
+													};
+												</script>
+											</body>
+											</html>
+										
+									</p>
+									<header class="major"><h2>Findings</h2></header>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<form method="post" action="https://formspree.io/f/mayzelez">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" required/>
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" required/>
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="6" required></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Clear" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split">
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<h3>Email</h3>
+									<a>cmikecarl01@gmail.com</a>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-phone"></span>
+									<h3>Phone</h3>
+									<span>+639451557209</span>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-home"></span>
+									<h3>Address</h3>
+									<span>Poblacion<br />
+									Tboli, South Cotabato 9513<br />
+									Philippines</span>
+								</div>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							
+							<li><a href="https://www.facebook.com/carlitoooo1" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/MikeCarlCastor" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/mike-carl-castor-66722524a" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						
+					</div>
+				</footer>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
