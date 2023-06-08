@@ -68,37 +68,49 @@
 									<h1><i class="fas fa-chart-line heading-icon"></i> DATA ANALYSIS & MANIPULATION</h1>
 									<h2 id="data-exploration-&-outlier-detection">Step 1. Data Exploration & Outlier Detection</h2>
 									<p>Following the column augmentation, I proceeded to examine the data values, specifically focusing first on the <em>avg_aht</em> columns. During this analysis, I noticed that some values appeared significantly lower compared to the rest. To gain a deeper understanding of the data distribution and identify potential outliers, I conducted descriptive analysis. This involved generating statistical summaries and constructing box plots. For a detailed demonstration of the entire process, please refer to the accompanying video.</p>
-									<video src="videos/avg_aht.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/Znuw-iqws2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<p>From the video above, I observed that there were no potential outliers in the data. However, I noticed a clear right-skewed distribution, indicating that there were more values on the left side and fewer values on the right side. Specifically, I noticed a higher prevalence of low values, particularly those below 10 seconds.</p>
 									<p>Since this is a personal project, let’s presume that I decided to reach out to the supervisors or agents involved to verify the accuracy of the data. Through our conversations, I confirmed that there was indeed a mistake in the extremely low values. It became apparent that these values were the result of encoding errors.</p>
 									<p>To ensure the integrity of the data, I took the initiative to fix the erroneous values. In the video clip below, I addressed the encoding mistakes and correct the data accordingly.</p> 
-									<video src="videos/aht_fix.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/1CS1J4Z2WK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<p>In the video, I detected potential outliers in the data after addressing the errors. To ensure the accuracy of the data, the best action plan is to engage in discussions with the supervisors or agents involved. Their insights and input will provide valuable context and help validate the presence of these outliers.</p>
 									<p>These outliers can be identified by applying data filters to isolate them. However, it is crucial to recognize that there may be special circumstances or conditions associated with these outliers that warrant further investigation. Given that this is a personal project and considering the limitations, I decided to include these outliers in my analysis. To better understand the process of filtering the data to track down the outliers, please refer to the video clip below. </p>
-									<video src="videos/filter_outlier.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/D8rPOVNkhU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<h2 id="automation-with-macros-and-vba">Step 2. Automation with Macros and VBA</h2>
 									<p>After analyzing the data from <em>avg_aht</em> column, I decided to organize my worksheet first using a macro before doing further analysis. Please refer to the video clip below. </p>
-									<video src="videos/call_center_dataset_org.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/yL_CimRRcrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<p> Afterward, I conducted a descriptive analysis and created box plots for the columns necessary for my analysis: <em>aht, tenure, calls_handled, avg_queue_time, and Customer_satisfaction. </em>I utilized ChatGPT to provide me the VBA codes in order to automate the summary statistics and box plots. Please refer to the video clip below to observe the detailed process and explanation. </p>
-									<video src="videos/summary_statistics_&_box_plots.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/jisk45Wafew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<h2 id="data-analysis-using-pivot-tables-and-charts">Step 3. Data Analysis Using Pivot Tables & Charts</h2>
-									<p> After generating summary statistics and box plots, I proceeded to tackle my analysis goals. To analyze the data further, I utilized pivot tables and charts. Please refer to the video clips provided below for a visual demonstration of my process and findings. </p>
+									<p> After generating summary statistics and box plots, I proceeded to tackle my analysis goals. To analyze the data further, I utilized pivot tables and charts. Please refer to the video clips provided below for a visual demonstration of my process and Click to show findings. </p>
 									<h3>Analysis #1. Determine the agents’ tenure and rank them based on customer satisfaction</h3>
-									<video src="videos/pivot_analysis_1.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/lgAVCXdwi_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<h4 class="dropdown-heading">
 										<span class="arrow">&#9658;</span>
-										Findings
+										Click to show findings
 									</h4>
 										<div class="dropdown-content">
 											<p>In terms of customer satisfaction ratings, Agent <em class="color-text-pos">Eric Molina</em> has emerged as the top performer, achieving an impressive score of <em class="color-text-pos">7.9</em>. Despite having a tenure of only 13 months, Eric has consistently delivered exceptional service to customers. On the other hand, <em class="color-text-neg">Cecille Chen</em>, who has been with the company for 21 months, scored <em class="color-text-neg">7.1</em> in customer ratings placing her at the bottom of the performance rankings. This highlights that while longer tenure may be expected to correlate with better performance, it is not always the case.</p>
@@ -106,35 +118,41 @@
 									<br>
 									<br>
 									<h3>Analysis #2. Calculate the average call duration for each product </h3>
-									<video src="videos/pivot_analysis_2.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/Uds4WCX-fRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<h4 class="dropdown-heading">
 										<span class="arrow">&#9658;</span>
-										Findings
+										Click to show findings
 									</h4>
 										<div class="dropdown-content">
-											<p>Based on the analysis of call duration, it was found that <em class="color-text-neg-2">Personal Loan</em> has the longest average duration of <em class="color-text-neg-2">18 minutes and 43 seconds</em>, followed by <em class="color-text-neg">Car Loan</em> with an average duration of <em class="color-text-neg">7 minutes and 53 seconds</em>. On the other hand, <em class="color-text-pos">Personal Loan</em> has the shortest average duration of <em class="color-text-pos">5 minutes and 55 seconds</em>. These findings suggest that agents may have insufficient experience or face challenges when handling calls related to Personal Loan.</p>
+											<p>Based on the analysis of call duration, it was found that <em class="color-text-neg-2">Personal Loan</em> has the longest average duration of <em class="color-text-neg-2">18 minutes and 43 seconds</em>, followed by <em class="color-text-neg">Car Loan</em> with an average duration of <em class="color-text-neg">7 minutes and 53 seconds</em>. On the other hand, <em class="color-text-pos">Personal Loan</em> has the shortest average duration of <em class="color-text-pos">5 minutes and 55 seconds</em>. These Click to show findings suggest that agents may have insufficient experience or face challenges when handling calls related to Personal Loan.</p>
 									  	</div>
 									<br>
 									<br>
 									<h3>Analysis #3. Analyze historical call volume patterns to identify peak periods</h3>
-									<video src="videos/pivot_analysis_3.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/li-fOsLGA5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<h4 class="dropdown-heading">
 										<span class="arrow">&#9658;</span>
-										Findings
+										Click to show findings
 									</h4>
 										<div class="dropdown-content">
-											<p>The analysis of weekly call volume reveals that <em class="color-text-pos">Fridays</em> and <em class="color-text-pos">Saturdays</em> exhibit the highest call volumes, with <em class="color-text-pos">1,008</em> and <em class="color-text-pos">1,031</em> calls respectively. These findings indicate that <em class="color-text-pos">Fridays</em> and <em class="color-text-pos">Saturdays</em> are the <em class="color-text-neg-2">peak periods</em> for call activity, with significantly more calls received compared to other days of the week. Understanding these peak periods is crucial for the company to allocate appropriate resources and ensure efficient handling of customer calls during these high-demand periods.</p>
+											<p>The analysis of weekly call volume reveals that <em class="color-text-pos">Fridays</em> and <em class="color-text-pos">Saturdays</em> exhibit the highest call volumes, with <em class="color-text-pos">1,008</em> and <em class="color-text-pos">1,031</em> calls respectively. These Click to show findings indicate that <em class="color-text-pos">Fridays</em> and <em class="color-text-pos">Saturdays</em> are the <em class="color-text-neg-2">peak periods</em> for call activity, with significantly more calls received compared to other days of the week. Understanding these peak periods is crucial for the company to allocate appropriate resources and ensure efficient handling of customer calls during these high-demand periods.</p>
 									  	</div>
 									<br>
 									<br>
 									<h3>Analysis #4. Identify factors contributing to longer customer waiting times</h3>
-									<video src="videos/pivot_analysis_4_.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/5Up2H9mrl-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<h4 class="dropdown-heading">
 										<span class="arrow">&#9658;</span>
-										Findings
+										Click to show findings
 									</h4>
 										<div class="dropdown-content">
 											<p>The analysis reveals a strong correlation between call volume and customer waiting times, particularly during <em class="color-text-neg-2">peak periods</em>. As the number of calls an agent receives increases, the customer waiting times also tend to lengthen. This suggests that <em class="color-text-neg-2">high</em> call volumes contribute to <em class="color-text-neg-2">longer</em> customer waiting times, indicating potential challenges in resource allocation and management.</p>
@@ -142,11 +160,13 @@
 									<br>
 									<br>
 									<h3>Analysis #5. Identify factors contributing to low customer satisfaction ratings</h3>
-									<video src="videos/pivot_analysis_5.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/4_FWgOSV0ZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 										<h4 class="dropdown-heading">
 											  <span class="arrow">&#9658;</span>
-											  Findings
+											  Click to show findings
 										</h4>
 											<div class="dropdown-content">
 												 <p>The analysis highlights a clear correlation between <em class="color-text-neg-2">increasing</em> call volume and <em class="color-text-neg-2">longer</em> waiting times, which in turn <em class="color-text-neg-2">negatively</em> impacts customer satisfaction ratings. This suggests that high call volumes create a bottleneck in customer service, leading to frustration and dissatisfaction among customers. It is important for the company to address this issue by implementing strategies to efficiently manage call volume and reduce waiting times, ultimately enhancing customer satisfaction levels.</p>
@@ -155,11 +175,13 @@
 									<br>
 									<h2 id="additional-analysis"><i class="fas fa-cogs"></i> Additional Analysis Using Data Validataion</h2>
 									<h3>Agent's Performance Analysis</h3>
-									<video src="videos/additional_analysis.mp4" controls></video>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/-g3OndKvF6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<h4 class="dropdown-heading">
 										<span class="arrow">&#9658;</span>
-										Findings
+										Click to show findings
 									</h4>
 										<div class="dropdown-content">
 											<ol>
@@ -173,7 +195,7 @@
 												<li>He has shown consistent performance across different loan products, with ratings of 7.9 for Property Loan, 8.1 for Personal Loan, and 7.7 for Car Loan.</li>
 											</ol>
 												<h4>&#128172; Conclusion</h4>
-												<p>Based on the findings, it can be concluded that Agent Eric Molina is the top performer, particularly in terms of customer satisfaction ratings. His consistent high ratings reflect his ability to meet customer needs and provide excellent service. While other factors may vary, customer satisfaction is a crucial measure of success in a customer-centric role. Therefore, Eric Molina's exceptional customer satisfaction ratings position him as the top performer within the team.</p>
+												<p>Based on the Click to show findings, it can be concluded that Agent Eric Molina is the top performer, particularly in terms of customer satisfaction ratings. His consistent high ratings reflect his ability to meet customer needs and provide excellent service. While other factors may vary, customer satisfaction is a crucial measure of success in a customer-centric role. Therefore, Eric Molina's exceptional customer satisfaction ratings position him as the top performer within the team.</p>
 									  	</div>
 									<br>	
 									<section id="two">
