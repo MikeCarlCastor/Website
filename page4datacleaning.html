@@ -12,12 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-        img, video {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-    }
+      
 		</style>
 	</head>
 	<body class="is-preload" >
@@ -56,48 +51,57 @@
 									<br>
 									<br>
 									<br>
-									
-									<p>In order to transform the raw file into a more comprehensible table, I have to import it to Power Query. After importing, the data will automatically turn it into a table, removing the unnecessary characters such as colons, semi-colons, commas, etc. The video clip below shows how I imported the file and transformed it in Power Query.</p>
-									<video src="videos/firstvid.mp4" controls></video>
+									<p>To convert the raw file into a readable table, it needs to be imported into Power Query. Upon import, the data will be transformed into a table, removing unnecessary characters. Refer to the video below for a demonstration of the import and transformation process in Power Query.</p>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/_CUQs-r5l9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<br>
 									
-										<h2 id="data-cleaning">Step 2. Data Cleaning</h2>
-									<p>Now that I finished loading the data into power query, the next step is cleaning. Firstly, I have to remove any duplicates in the data. Then, I have to remove or replace any missing values. Missing values are usually defined as <em>“nulls”</em>. Lastly, I have to change the <em>date</em> data type into dates since they are in numerical values. The clip below shows the entire cleaning process.</p>
-									<video src="videos/cleaning_process.mp4" controls></video>
+									<h2 id="data-cleaning">Step 2. Data Cleaning</h2>
+									<p>After successfully loading the data into Power Query, the subsequent task involves data cleaning. Initially, it is imperative to eliminate any duplicate entries within the dataset. Following that, the focus shifts to handling missing values, often referred to as <em>nulls</em>, by either removing them or replacing them with appropriate values. Lastly, the numerical date values need to be converted into proper date data types. The provided video clip demonstrates the complete process of data cleaning.</p>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/QllsbIFzWyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<br>
-									
-										<h2 id="loading-data-Into-Excel">Step 3. Loading Data Into Excel</h2>
-									<p>After cleaning the data, I loaded it on Excel and changed the sheet name as <em>“call_center_cleaned”</em>. The picture shows what the data looks like after loaded on Excel.</p>
+									<div>
+									<h2 id="loading-data-Into-Excel">Step 3. Loading Data Into Excel</h2>
+									<p>Upon completing the data cleaning process, I proceeded to load the cleaned data into Excel. I renamed the sheet as "call_center_cleaned". The image below provides a visual representation of how the data appears after being loaded into Excel.</p>
 									<img src="images/apply_and_load.png" alt="Image related to the content" style="max-width: 100%; height: 600;">
 									<br>
 									<br>
 									<br>
 								
-									<p>Although the data is already transformed and cleaned, there are still a few columns that I need to add. If you can remember, I have a dataset with two reference tables. This is where it will come in handy. The picture below shows what the reference table looks like.  </p>
+									<p>While the data has been transformed and cleaned, there is still a need to add a few columns. As previously mentioned in the <a href="page4-about-the-data.html">"About the Data"</a> section, the dataset includes two reference tables, which will be useful in this context. The image below depicts the appearance of the reference tables.  </p>
 									<img src="images/reference_table.png" alt="Image related to the content" style="max-width: 100%; height: 600;">
 									<br>
 									<br>
 									<br>
 									
 									<h2 id="adding-columns-using-xlookup">Step 4. Adding Columns Using XLOOKUP</h2>
-									<p>After copying the reference tables into my <em>call_center_cleaned</em> workbook, I began adding columns to the dataset. The first column I added was the agents’ full name. The video clip below shows the process.  </p>
-									<video src="videos/add_column_name.mp4" controls></video>
+									<p>After copying the reference tables into my <em>call_center_cleaned</em> workbook, I proceeded to add columns to the dataset. The first column I added was for the agents' full names. You can watch the process in the video clip below:</p>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/BxiRPpnPkr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<br>
 									
-									<p>I also wanted to extract the data in <em>Hire Date</em> column from the reference sheet. To do this, I used <em>XLOOKUP</em> function just like what I did in <em>Full Name</em> column. Please play the video clip below to see the process.</p>
-									<video src="videos/hire_date.mp4" controls></video>
+									<p>To extract the data in the <em>Hire Date</em> column from the reference sheet, I utilized the <em>XLOOKUP</em> function, similar to what was done for the for the agents' full names. Please play the video clip below to see the process.</p>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/VN83j9tqg80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<br>
 									
-									<p>Next, let’s integrate some data from the product table. I wanted to extract the <em>product_name</em> based on the <em>product_id</em>. For this, I used the same lookup function. See the video clip below.</p>
-									<video src="videos/product_name.mp4" controls></video>
+									<p>In the next step, I integrated data from the product table by extracting the <em>product_name</em> based on the <em>product_id</em>. I utilized the same lookup function for this purpose. You can view the process in the following video clip:</p>
+									<div style="width:100%; text-align:center;">
+										<iframe width="100%" height="600" src="https://www.youtube.com/embed/VN83j9tqg80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<br>
 									<br>
 									<br>
@@ -132,7 +136,8 @@
 											</ul>
 										</div>
 									</section>	
-								</div>	
+								</div>
+							</div>	
 					</div>
 
 				<!-- Contact -->
