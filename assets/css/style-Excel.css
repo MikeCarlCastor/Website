@@ -2394,6 +2394,12 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
+			.column-list {
+					
+				column-count: 2; /* Adjust the number of columns as desired */
+				column-gap: 20px; /* Adjust the gap between columns as desired */
+			  }
+
 		ul.actions.stacked {
 			-moz-flex-direction: column;
 			-webkit-flex-direction: column;
