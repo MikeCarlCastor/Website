@@ -2169,6 +2169,23 @@ input, select, textarea {
 		opacity: 1.0;
 	}
 
+	.dropdown-content {
+		display: none;
+	  }
+	  
+	  .dropdown-content.show {
+		display: block;
+	  }
+
+	  .dropdown-heading .arrow {
+		transition: transform 0.3s;
+		display: inline-block;
+	  }
+	  
+	  .dropdown-heading.open .arrow {
+		transform: rotate(90deg);
+	  }
+
 /* Box */
 
 	.box {

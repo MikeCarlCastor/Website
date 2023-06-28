@@ -12,10 +12,26 @@
 		<link rel="stylesheet" href="assets/css/style-Excel.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-			header.major h1 {
-				font-family: "Montserrat", sans-serif;
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+		header.major h1 {
+		font-family: "Montserrat", sans-serif;
         }
+
+			.show-more {
+				color: rgb(255, 217, 0);
+				cursor: pointer;
+			}
+
+			.description {
+				max-height: 100px; /* Set the initial height to show a truncated version of the description */
+				overflow: hidden;
+			}
+			
+			.description.expanded {
+				max-height: none; /* Expand the height to show the full description */
+			}
+  
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -77,21 +93,41 @@
 											</header>
 											<b><span>Skills:</span></b>
 
-<div class="skills-container">
-<ul class="column-list" style="font-size: 80%;">	
-	<li>Data Loading and Transformation</li>
-	<li>Data Cleaning</li>
-	<li>Column Manipulation (XLOOKUP and Formulas)</li>
-	<li>Data Exploration and Outlier Detection</li>
-	<li>Automation with Macros and VBA</li>
-	<li>Pivot Tables and Charts for Data Analysis</li>
-	<li>Data Validation for Additional Analysis</li>
-</ul>
+											<div class="skills-container">
+											<ul class="column-list" style="font-size: 80%;">	
+												<li>Data Loading and Transformation</li>
+												<li>Data Cleaning</li>
+												<li>Column Manipulation (XLOOKUP and Formulas)</li>
+												<li>Data Exploration and Outlier Detection</li>
+												<li>Automation with Macros and VBA</li>
+												<li>Pivot Tables and Charts for Data Analysis</li>
+												<li>Data Validation for Additional Analysis</li>
+											</ul>
 											</div>
+											<div class="project-description">
+												<div class="description truncated">
+													<p>
+													In this project, I conducted a comprehensive analysis of call center performance to identify key metrics and optimize operational efficiency. Leveraging my skills in data loading and transformation, I obtained the raw call center data and prepared it for analysis. This involved cleaning the data, handling missing values, and structuring the dataset for further exploration.
+													</p>
+													<p>
+													Using advanced Excel techniques such as XLOOKUP and formulas, I manipulated columns and derived additional variables to provide valuable insights into call center performance. By identifying outliers and anomalous data points, I implemented data exploration techniques to uncover potential issues and areas for improvement.
+													</p>
+													<p>
+													To streamline the analysis process, I automated repetitive tasks and data manipulations using macros and VBA, significantly reducing manual effort and ensuring consistent results. Additionally, I utilized pivot tables and charts to summarize and visualize the data, enabling stakeholders to easily interpret trends and patterns.
+													</p>
+													<p>
+													Furthermore, I employed data validation techniques to perform additional analysis, such as comparing performance metrics across different time periods or call center teams. This allowed for a deeper understanding of the factors impacting call center performance and facilitated data-driven decision-making.
+													</p>
+													<p>
+													The Call Center Performance Analysis project showcases my intermediate to advanced skills in data manipulation, exploration, and automation using Excel. It demonstrates my ability to transform raw data into actionable insights, optimize processes, and provide valuable recommendations for enhancing call center performance.
+													</p>
+												</div>
+													<a href="#" class="show-more">See more...</a>
+												</div>
+												<br>
 												<ul class="actions">
 													<li><a href="page3callcenterTOC.html" class="button">Learn more</a></li>
-										
-												</ul>
+											</ul>
 										</div>
 									</div>
 								</section>
@@ -189,6 +225,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script>
+			  $(document).ready(function() {
+				$('.show-more').click(function(e) {
+				  e.preventDefault();
+				  $(this).prev('.description').toggleClass('expanded');
+				  
+				  if ($(this).prev('.description').hasClass('expanded')) {
+					$(this).text('See less...');
+				  } else {
+					$(this).text('See more...');
+				  }
+				});
+			  });
+			</script>
 	</body>
 </html>
